@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tecnologia Informática @WM — Portafolio</title>
+<meta name="description" content="Centro de servicios informáticos en Itauguá — Mantenimiento, reparación y venta de equipos. Wilson Mendoza — Docente y técnico con +20 años de experiencia.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a2d9f6f6c0.js" crossorigin="anonymous"></script>
+<style>
+:root { --bg: #0f1724; --card: #0b1220; --accent: #00b4d8; --muted: #94a3b8; --glass: rgba(255,255,255,0.03); --max-w: 1100px; font-family: 'Poppins', sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(180deg, #071021 0%, #0b1220 100%); color: #e6eef8; line-height: 1.5; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 20px; }
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(6,10,15,0.6); backdrop-filter: blur(6px); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; }
+.brand h1 { font-size: 18px; margin: 0; }
+nav ul { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; }
+nav a { color: var(--muted); text-decoration: none; padding: 8px 12px; border-radius: 8px; }
+nav a.active, nav a:hover { color: white; background: var(--glass); }
+main { padding-top: 84px; }
+.hero { display: grid; grid-template-columns: 1fr 420px; gap: 24px; align-items: center; padding: 36px 0; }
+.hero-card { background: var(--glass); padding: 28px; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+.hero h2 { margin: 0 0 6px; font-size: 28px; }
+.hero p.lead { color: var(--muted); margin: 0 0 16px; }
+.btn { padding: 10px 14px; border-radius: 10px; border: 0; cursor: pointer; }
+.btn-primary { background: var(--accent); color: #021022; }
+.btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: var(--muted); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+.profile { padding: 18px; background: var(--card); border-radius: 12px; text-align: center; }
+.profile img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 10px; }
+.skills { padding: 18px; background: var(--card); border-radius: 12px; }
+.skill { display: flex; justify-content: space-between; margin: 8px 0; }
+.progress { height: 8px; background: rgba(255,255,255,0.06); border-radius: 8px; overflow: hidden; }
+.progress > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), #4ee0c6); }
+.services, .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 12px; }
+.service, .project { background: var(--card); padding: 18px; border-radius: 12px; text-align: center; }
+.service img, .project img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 420px; gap: 18px; margin-top: 12px; }
+form { background: var(--card); padding: 18px; border-radius: 12px; }
+input, textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); background: transparent; color: inherit; margin-bottom: 8px; }
+.msg { display: none; padding: 10px; border-radius: 8px; margin-top: 10px; }
+.msg.success { background: rgba(14,102,70,0.2); color: #b7f3d8; }
+.msg.error { background: rgba(153,27,27,0.12); color: #ffd7d7; }
+footer { padding: 22px 0; margin-top: 28px; color: var(--muted); text-align: center; }
+@media (max-width: 980px) { .hero { grid-template-columns: 1fr; } .contact-grid { grid-template-columns: 1fr; } nav ul { display: none; } }
+.fadeup { transform: translateY(12px); opacity: 0; transition: all 600ms ease; }
+.in-view { transform: none; opacity: 1; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="assets/logo-globo.png" alt="Logo Globo">
+      <div>
+        <h1>Tecnologia Informática @WM</h1>
+        <div style="font-size:12px;color:var(--muted)">Itauguá — Barrio San Agustín</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- Hero -->
+<section id="inicio" class="hero">
+  <div class="hero-card fadeup">
+    <h2>Servicio Integral en Tecnología para tu Hogar o Negocio</h2>
+    <p class="lead">En Tecnologia Informática @WM ofrecemos mantenimiento, reparación, venta, capacitación y desarrollo de software a medida. Servicio profesional en Itauguá, Barrio San Agustín — frente a la cancha sintética Villa Gol.</p>
+    <div class="about-grid">
+      <div class="profile">
+        <img src="assets/foto-perfil.jpg" alt="Foto de Wilson Mendoza">
+        <h3>Wilson Mendoza</h3>
+        <p style="color:var(--muted)">Docente y Técnico Informático — +20 años de experiencia</p>
+      </div>
+      <div class="skills">
+        <h3>Habilidades</h3>
+        <div class="skill"><div><strong>Soporte y Mantenimiento</strong><div class="progress"><span style="width:95%"></span></div></div><div>95%</div></div>
+        <div class="skill"><div><strong>Reparación y Diagnóstico</strong><div class="progress"><span style="width:90%"></span></div></div><div>90%</div></div>
+        <div class="skill"><div><strong>Desarrollo Web</strong><div class="progress"><span style="width:80%"></span></div></div><div>80%</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre -->
+<section id="sobre">
+  <h2>Sobre Nosotros</h2>
+  <div class="hero-card fadeup">
+    <p>Tecnologia Informática @WM, liderado por <strong>Wilson Mendoza</strong>, ofrece soporte técnico, mantenimiento, formación y desarrollo de soluciones digitales. Brindamos atención personalizada y soluciones adaptadas al cliente.</p>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="services fadeup">
+    <div class="service">
+      <img src="assets/proyecto1.jpg" alt="Mantenimiento Preventivo">
+      <h4>Mantenimiento Preventivo</h4>
+      <p style="color:var(--muted)">Limpieza, diagnóstico y actualización de software.</p>
+    </div>
+    <div class="service">
+      <img src="assets/proyecto2.jpg" alt="Reparación y Diagnóstico">
+      <h4>Reparación y Diagnóstico</h4>
+      <p style="color:var(--muted)">Cambio de piezas, recuperación de datos y test de componentes.</p>
+    </div>
+    <div class="service">
+      <img src="assets/proyecto3.jpg" alt="Venta de Equipos">
+      <h4>Venta de Equipos</h4>
+      <p style="color:var(--muted)">Venta de equipos, componentes y asesoramiento técnico.</p>
+    </div>
+    <div class="service">
+      <img src="assets/proyecto4.jpg" alt="Desarrollo Web">
+      <h4>Desarrollo Web</h4>
+      <p style="color:var(--muted)">Diseño y programación de páginas y sistemas personalizados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Proyectos -->
+<section id="proyectos">
+  <h2>Proyectos</h2>
+  <div class="projects-grid fadeup">
+    <div class="project">
+      <img src="assets/proyecto1.jpg" alt="Tienda Online a Medida">
+      <h4>Tienda Online a Medida</h4>
+      <p style="color:var(--muted)">Desarrollo de tienda con catálogo personalizado y administración.</p>
+    </div>
+    <div class="project">
+      <img src="assets/proyecto2.jpg" alt="Sistema Escolar Integral">
+      <h4>Sistema Escolar Integral</h4>
+      <p style="color:var(--muted)">Software de gestión escolar y control académico.</p>
+    </div>
+    <div class="project">
+      <img src="assets/proyecto3.jpg" alt="Recuperación de Datos">
+      <h4>Recuperación de Datos</h4>
+      <p style="color:var(--muted)">Servicio profesional de recuperación de archivos perdidos.</p>
+    </div>
+    <div class="project">
+      <img src="assets/proyecto4.jpg" alt="Red LAN PyME">
+      <h4>Red LAN PyME</h4>
+      <p style="color:var(--muted)">Implementación de red local y servidores para pequeñas empresas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto">
+  <h2>Contacto y Ubicación</h2>
+  <div class="contact-grid">
+    <form id="contactForm" novalidate>
+      <label>Nombre</label><input id="nombre" required>
+      <label>Email</label><input id="email" type="email" required>
+      <label>Mensaje</label><textarea id="mensaje" rows="5" required></textarea>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+      <div id="formMsg" class="msg"></div>
+    </form>
+    <aside class="hero-card">
+      <h4>Dirección</h4>
+      <p>Itauguá — Barrio San Agustin</p>
+      <iframe src="https://www.google.com/maps?q=Itaugu%C3%A1+San+Agust%C3%ADn+cancha+sint%C3%A9tica+Villa+Gol&output=embed" width="100%" height="260" style="border:0;border-radius:8px"></iframe>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div><strong>Tecnologia Informática @WM</strong> — Wilson Mendoza © <span id="year"></span></div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Navegación smooth
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  navLinks.forEach(x => x.classList.remove('active'));
+  a.classList.add('active');
+  document.getElementById(a.getAttribute('href').slice(1)).scrollIntoView({ behavior: 'smooth' });
+}));
+
+// Animación fade-up
+const faders = document.querySelectorAll('.fadeup');
+const fObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); fObs.unobserve(e.target); } });
+}, { threshold: 0.15 });
+faders.forEach(f => fObs.observe(f));
+
+// Formulario
+const form = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const nombre = document.getElementById('nombre').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const mensaje = document.getElementById('mensaje').value.trim();
+  function show(type, text) {
+    formMsg.className = 'msg ' + (type === 'ok' ? 'success' : 'error');
+    formMsg.textContent = text;
+    formMsg.style.display = 'block';
+  }
+  if (!nombre || !email || !mensaje) { show('err', 'Completa todos los campos.'); return; }
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRe.test(email)) { show('err', 'Email inválido.'); return; }
+  show('ok', 'Mensaje enviado correctamente.');
+  form.reset();
+});
+</script>
+</body>
+</html>
